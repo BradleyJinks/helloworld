@@ -30,6 +30,15 @@ resource "aws_s3_bucket" "b" {
   }
 }
 
+resource "aws_s3_bucket" "bb" {
+  bucket = "bj-test-bucket2"
+
+  tags = {
+    Name        = "My bucket 2"
+    Environment = "Dev"
+  }
+}
+
 variable "subject" {
    type = string
    default = "World"
